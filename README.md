@@ -1,13 +1,13 @@
 Strict Form Request
 ===================
 
-[![Tests](https://img.shields.io/github/actions/workflow/status/nivseb/strict-form-request/test.yml?branch=main&label=Tests)](https://github.com/nivseb/strict-form-request/actions/workflows/tests.yml)
-[![Supported PHP Version](https://badgen.net/packagist/php/nivseb/strict-form-request?color=8892bf)](https://www.php.net/supported-versions)
-[![Latest Stable Version](https://poser.pugx.org/nivseb/strict-form-request/v/stable.svg)](https://packagist.org/packages/nivseb/strict-form-request)
-[![Total Downloads](https://poser.pugx.org/nivseb/strict-form-request/downloads.svg)](https://packagist.org/packages/nivseb/strict-form-request)
+[![Tests](https://img.shields.io/github/actions/workflow/status/nivseb/strict-request/test.yml?branch=main&label=Tests)](https://github.com/nivseb/strict-request/actions/workflows/tests.yml)
+[![Supported PHP Version](https://badgen.net/packagist/php/nivseb/strict-request?color=8892bf)](https://www.php.net/supported-versions)
+[![Latest Stable Version](https://poser.pugx.org/nivseb/strict-request/v/stable.svg)](https://packagist.org/packages/nivseb/strict-request)
+[![Total Downloads](https://poser.pugx.org/nivseb/strict-request/downloads.svg)](https://packagist.org/packages/nivseb/strict-request)
 
 This package provide a extended request class, based on the laravel `FormRequest`. This extended request class allow you
-to write more restricted validation rules. By default the original form request combine all input sources to validate
+to write more restricted validation rules. By default, the original form request combine all input sources to validate
 all
 data based one rule set.
 If you want to define on wich way the client should send the data to your application, this package is the solution.
@@ -27,7 +27,7 @@ Installation
 
 1. To install PHP Mock Server Connector you can easily use composer.
     ```sh
-    composer require nivseb/strict-form-request
+    composer require nivseb/strict-request
     ```
-2. Build your request by extending from `\Nivseb\StrictFormRequest\Http\StrictFormRequest`
+2. Build your request by extending from `\Nivseb\StrictRequest\Http\StrictFormRequest`
 3. Write your validation by adding rules for header, body and/or query

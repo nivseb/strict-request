@@ -1,5 +1,5 @@
 {
-    "name": "nivseb/strict-form-request",
+    "name": "nivseb/strict-request",
     "description": "Strict form request allows you to build with more restrictive strict validation.",
     "keywords": [
         "laravel",
@@ -11,7 +11,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Nivseb\\StrictFormRequest\\": "src"
+            "Nivseb\\StrictRequest\\": "src"
         }
     },
     "autoload-dev": {
