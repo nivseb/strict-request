@@ -11,5 +11,5 @@ Supported Versions
 Reporting a Vulnerability
 -------------------------
 
-To report a security vulnerability, please Open a [`draft security advisory`](https://github.com/nivseb/strict-form-request/security/advisories/new)
+To report a security vulnerability, please Open a [`draft security advisory`](https://github.com/nivseb/strict-request/security/advisories/new)
 so we can coordinate the fix and disclosure.
