@@ -1,0 +1,84 @@
+{
+    "name": "nivseb/strict-form-request",
+    "description": "Strict form request allows you to build with more restrictive strict validation.",
+    "keywords": [
+        "laravel",
+        "form",
+        "request",
+        "validation"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nivseb\\StrictFormRequest\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marvin Naumann",
+            "email": "1013829+nivseb@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-faker": "^3.0",
+        "orchestra/pest-plugin-testbench": "^3.0",
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "kubawerlos/php-cs-fixer-custom-fixers": "^3.22",
+        "mockery/mockery": "^1.6",
+        "phpstan/phpstan": "^1.12",
+        "rector/rector": "^1.2",
+        "ext-pdo": "*",
+        "ext-redis": "*",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "scripts": {
+        "check": [
+            "@composer validate",
+            "@phpstan"
+        ],
+        "check-dev": [
+            "@composer validate",
+            "@phpstan-dev"
+        ],
+        "analyse": [
+            "@phpstan"
+        ],
+        "analyse-dev": [
+            "@phpstan-dev"
+        ],
+        "uniform": [
+            "@rector",
+            "@format"
+        ],
+        "phpstan": "vendor/bin/phpstan analyse -c ./dev/config/phpstan.neon",
+        "phpstan-dev": "vendor/bin/phpstan analyse -c ./dev/config/phpstan-dev.neon",
+        "rector": "vendor/bin/rector process -c ./dev/config/rector.php",
+        "format": "vendor/bin/php-cs-fixer fix --diff --config=./dev/config/php-cs-fixer.php",
+        "format:check": "vendor/bin/php-cs-fixer check --config=./dev/config/php-cs-fixer.php",
+        "test": "vendor/bin/pest --cache-directory=tests/.cache",
+        "test:parallel": "@test --parallel",
+        "test:coverage:line": "XDEBUG_MODE=coverage vendor/bin/pest --cache-directory=tests/test_results/.cache --coverage",
+        "test:coverage:path": "XDEBUG_MODE=coverage vendor/bin/pest --cache-directory=tests/test_results/.cache --coverage --path-coverage"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
